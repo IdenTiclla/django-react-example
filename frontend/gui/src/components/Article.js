@@ -5,18 +5,7 @@ import { MessageOutlined, LikeOutlined, StarOutlined } from '@ant-design/icons';
 
 
 
-const listData = [];
-for (let i = 0; i < 23; i++) {
-  listData.push({
-    href: 'https://ant.design',
-    title: `ant design part ${i}`,
-    avatar: 'https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png',
-    description:
-      'Ant Design, a design language for background applications, is refined by Ant UED Team.',
-    content:
-      'We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.',
-  });
-}
+
 
 const IconText = ({ icon, text }) => (
     <Space>
@@ -25,7 +14,7 @@ const IconText = ({ icon, text }) => (
     </Space>
   );
 
-const Article = (props) => {
+const Articles = (props) => {
     return (
         <List
             itemLayout="vertical"
@@ -36,7 +25,7 @@ const Article = (props) => {
             },
             pageSize: 3,
             }}
-            dataSource={listData}
+            dataSource={props.data}
             footer={
             <div>
                 <b>ant design</b> footer part
@@ -70,4 +59,4 @@ const Article = (props) => {
     )  
 }
 
-export default Article
+export default Articles
